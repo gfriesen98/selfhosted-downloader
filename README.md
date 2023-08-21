@@ -6,11 +6,11 @@ The goal of this project is to try and use as few package dependencies as I can
 
 ## how to use
 
-1. git clone this repo
+1. `git clone` this repo
 
-2. run: `cd selfhosted-downloader && npm install`
+2. Run: `cd selfhosted-downloader && npm install`
 
-3. create this .env file in project root:
+3. Create `.env` in project root, or rename `example.env` to `.env`:
 
 ```env
 PORT=3000 # backend port number
@@ -25,11 +25,11 @@ Feel free to change these, leave the YTDLP url's alone though
 - PORT: The default port number for the backend
 - SKIP_CHECK_DEPENDENCIES: Skips checking for yt-dlp binary and downloads folder
 - DOWNLOAD_DIR: Default is ./downloads, but you can change it to be somewhere else. This is just for temporary files before sending back to the browser. This folder will be created automatically
-- YTDLP_BINARY: the name of the binary. for linux, it is "yt-dlp_linux" unless it has been installed from your package manager
-- YTDLP_RELEASES_URL: the url to check for the latest yt-dlp version
-- YTDLP_SRC_URL: the url to get the actual binary
+- YTDLP_BINARY: The name of the binary. for linux, it is "yt-dlp_linux" unless it has been installed from your package manager
+- YTDLP_RELEASES_URL: The url to check for the latest yt-dlp version
+- YTDLP_SRC_URL: The url to get the actual binary
 
-4. start the webserver: `node index.js`
+4. Start the webserver: `node index.js`
 
-5. in your browser, go to `http://[ip, hostname or localhost]:3000`
+5. In your browser, go to `http://[ip, hostname or localhost]:3000`
 
