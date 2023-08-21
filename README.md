@@ -1,6 +1,6 @@
 # selfhosted-downloader
 
-A front and backend mainly for yt-dlp to help making editing metadata less painful
+A front and backend mainly for yt-dlp to help make editing metadata less painful
 
 The goal of this project is to try and use as few package dependencies as I can
 
@@ -30,6 +30,14 @@ Feel free to change these, leave the YTDLP url's alone though
 - YTDLP_SRC_URL: The url to get the actual binary
 
 4. Start the webserver: `node index.js`
-
+    - With SKIP_CHECK_DEPENDENCIEs=false, the backend will check for yt-dlp updates on startup
 5. In your browser, go to `http://[ip, hostname or localhost]:3000`
 
+
+## info
+
+On startup, the backend will check for yt-dlp updates and download the latest version. If there is an issue with the binary, download yt-dlp from https://github.com/yt-dlp/yt-dlp/releases/, place the downloaded binary in a `./binaries` folder in the project root and set the YT_DLP_BINARY and SKIP_CHECK_DEPENDENCIES environment variables accordingly
+
+## more info
+
+This program is really only designed to be used by one user (me). There may be issues if you host this at home and have multiple people access the yt-dlp portion of the website. I haven't written worker code to elminate any potential blocking issues but it should at least be asyncronus
